@@ -3,6 +3,9 @@ Object detection, COCO dataset, DETR model, ML pipelines,  edge, and cloud nativ
 
 ## Reading
 
+### Hugging Face Intro
+https://huggingface.co/course/chapter0/1?fw=pt
+
 ### Object detection 
 
 https://huggingface.co/docs/api-inference/detailed_parameters#object-detection-task
