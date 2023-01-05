@@ -23,11 +23,6 @@ https://mkdev.me/en/posts/the-tool-that-really-runs-your-containers-deep-dive-in
 https://www.docker.com/blog/what-is-containerd-runtime/
 
 
-### Installing Docker
-
-https://docs.docker.com/get-docker/ 
-
-
 ### Kubernetes
 
 https://kubernetes.io/docs/concepts/
