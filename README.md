@@ -9,9 +9,9 @@ The syllabus and homeworks are as follows:
   
 Week | Content 
 --- | --- 
-01| Introduction and Overview
-02| Clouds, Infrastructure, and Machine Learning Cloud Services
-03| Introduction to Containers
+01| Introduction, Cloud Fundamentals
+02| Introduction to Containers
+03| Object Detection, DETR, Huggingface, Google Colab
 04| Deep Learning 101
 05| Deep Learning Frameworks
 06| Optimizing Models for the Edge and GStreamer
