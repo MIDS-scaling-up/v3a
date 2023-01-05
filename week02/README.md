@@ -1,30 +1,55 @@
 # Lecture 2
-Object detection, COCO dataset, DETR model, ML pipelines,  edge, and cloud native.
+Virtual machines, containers, orchestration and Kubernetes, edge, and cloud native.
 
 ## Reading
 
-### Hugging Face Intro
-https://huggingface.co/course/chapter0/1?fw=pt
+### Virtual Machines
 
-### Object detection 
+https://www.ibm.com/cloud/learn/hypervisors
 
-https://huggingface.co/docs/api-inference/detailed_parameters#object-detection-task
+https://www.stratoscale.com/blog/hyperconvergence/cloud-101-what-is-a-hypervisor/
 
-https://cocodataset.org/#download
+https://www.redhat.com/en/topics/virtualization/what-is-KVM
 
-https://paperswithcode.com/task/object-detection
 
-### DETR model
+### Containers
 
-https://github.com/facebookresearch/detr
+https://avatao.com/life-before-docker-and-beyond-a-brief-history-of-container-security/
 
-https://ai.facebook.com/research/publications/end-to-end-object-detection-with-transformers
+https://docs.docker.com/get-started/overview/
 
-### Building ML pipelines
+https://mkdev.me/en/posts/the-tool-that-really-runs-your-containers-deep-dive-into-runc-and-oci-specifications
 
-https://aws.amazon.com/blogs/machine-learning/architect-and-build-the-full-machine-learning-lifecycle-with-amazon-sagemaker/
+https://www.docker.com/blog/what-is-containerd-runtime/
 
-https://azure.github.io/ACE_Azure_ML/slides/AML_service.pptx
 
+### Installing Docker
+
+https://docs.docker.com/get-docker/ 
+
+
+### Kubernetes
+
+https://kubernetes.io/docs/concepts/
+
+https://kubernetes.io/docs/tutorials/kubernetes-basics/
+
+https://rancher.com/docs/k3s/latest/en/architecture/
+
+https://thenewstack.io/how-k3s-portworx-and-calico-can-serve-as-a-foundation-of-cloud-native-edge-infrastructure/
+
+### Miscellaneous
+
+https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/definition
+
+https://blogs.nvidia.com/blog/2019/10/22/what-is-edge-computing/
+
+https://developer.nvidia.com/blog/deploying-ai-apps-with-egx-on-jetson-xavier-nx-microservers/
+
+https://blogs.nvidia.com/blog/2020/10/08/retailers-edge-computing-ai/
+
+https://kubernetes.io/blog/2018/05/22/getting-to-know-kubevirt/ 
+
+https://elinux.org/Jetson_Zoo
 
 
