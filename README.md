@@ -11,7 +11,7 @@ Week | Content
 --- | --- 
 01| Introduction, Cloud Fundamentals
 02| Introduction to Containers
-03| Object Detection, DETR, Huggingface, Google Colab
+03| Google Colab, Kaggle, HuggingFace, Object Detection, DETR
 04| Deep Learning 101
 05| Deep Learning Frameworks
 06| Optimizing Models for the Edge and GStreamer
