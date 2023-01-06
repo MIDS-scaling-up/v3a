@@ -1,4 +1,4 @@
-# Lab 3 with no Jetson: Containers, Docker, and Kubernetes
+# Lab 2 with no Jetson: Containers, Docker, and Kubernetes
 This lab will introduce containers, Docker, and the container orchestration system, Kubernetes.  We will use Docker to build and run containers, then explore running the containers with Kubernetes.
 
 This version of the lab will use Docker installed into a virtual machine running on your worksation.  Lab will not work with the Docker Desktop software commonally used as we'll require access to a web camera and leverage the display of the VM.  

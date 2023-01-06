@@ -1,4 +1,4 @@
-# Homework 3 - Containers, Kubernetes, and IoT/Edge
+# Homework 2 - Containers, Kubernetes, and IoT/Edge
 
 ## Please note that this homework is graded
 
@@ -28,12 +28,12 @@ Please don't be intimidated by this homework as it is mostly a learning experien
 
 On the Jetson, we request that you use [Alpine Linux](https://alpinelinux.org/) as the base OS for your MQTT containers as it is frugal in terms of storage. You will need to use Ubuntu as the base for your OpenCV container. Please recall that Jetson devices and Raspberry Pis are both based on the [ARM v8 architecture](https://en.wikichip.org/wiki/arm/armv8) as opposed to Intel x86/64 architecture.
 
-For details on using MQTT with Apline and Ubuntu, refer to Lab 3.
+For details on using MQTT with Apline and Ubuntu, refer to Lab 2.
 
 [OpenCV](https://opencv.org/) is THE library for computer vision.  At the moment it has fallen behind the Deep Learning curve, but it could catch up at any moment.  For traditional, non-DL image processing, it is unmatched.
 
 
-Refer to Lab 3 for how to get started with OpenCV and some addtional hints for getting started with OpenCV in a container are [here](https://github.com/rdejana/w251-hints/tree/master/hw3), if you need them.
+Refer to Lab 2 for how to get started with OpenCV and some addtional hints for getting started with OpenCV in a container are [here](https://github.com/rdejana/w251-hints/tree/master/hw3), if you need them (the link says hw3, which is fine since the new hw2 is the old hw3).
 
 ### Facial detection with OpenCV 
 We suggest that you use a simple pre-trained frontal face HAAR Cascade Classifier [documented here](https://docs.opencv.org/3.4.1/d7/d8b/tutorial_py_face_detection.html).  There is no need to detect eyes,just the face.  Notice how simple it is to use:
@@ -58,10 +58,10 @@ Note, you can find the OpenCV cascade files on your Jetson in the directory /usr
 ```
 
 ### Linking containers
-On the Jetson, your containers should communicate via Kubernetes services, see Lab 3 for details.  On the cloud side, you should use a user defined network to enable your containers to easily communicate.  Please review the [docker networking tutorial](https://docs.docker.com/network/network-tutorial-standalone/#use-user-defined-bridge-networks).  The idea is that you will need to create a local bridge network and then the containers you will create will join it.
+On the Jetson, your containers should communicate via Kubernetes services, see Lab 2 for details.  On the cloud side, you should use a user defined network to enable your containers to easily communicate.  Please review the [docker networking tutorial](https://docs.docker.com/network/network-tutorial-standalone/#use-user-defined-bridge-networks).  The idea is that you will need to create a local bridge network and then the containers you will create will join it.
 
 ### Overall architecture / flow
-Your overall application flow / architecture should be something like: ![this](hw3.png).
+Your overall application flow / architecture should be something like: ![this](hw2.png).
 
 ### Bonus Points
 You can recieve an extra 10 bonus points for using Kubernetes on the cloud side rather than Docker.
@@ -71,7 +71,7 @@ You can recieve an extra 10 bonus points for using Kubernetes on the cloud side 
 - Using a USB device from Kubernetes requires a privileged security context.  If you'd like your container to display your camera's images, you'll need to enable host networking and set the DISPLAY env variable.
 - To make storing in Object Store easier, look at https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-configure-bucket.html
 
-Review Lab 3!
+Review Lab 2!
 
 ### Grading/Submission
 You are scored based on the following:
