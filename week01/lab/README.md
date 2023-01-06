@@ -9,7 +9,8 @@ We strongly encourage you to de-provision unused resources promptly,
 watch your spend/billing reports frequently, create Billing alerts to
 avoid incurring extra costs.
 
-**Any spend beyond the \$1000 limit will be student's responsibility!**
+**Until you receive and apply the \$1000 voucher, test only with "FREE TIER ELIGIBLE" Cloud resources to avoid charges!!**
+**Any spend beyond the \$1000 limit after you apply the voucher will be student's responsibility!**
 
 # Create and Setup your AWS account
 
@@ -115,14 +116,14 @@ aws ec2 authorize-security-group-ingress --group-id YOUR_PRIVATE_GROUP_ID --prot
 ```
 
 #### Launch Bastion EC2 Instance(JumpBox) into the public Security Group
-Use Ubuntu AMI on t2.large instance in the default VPC.  
+Use Ubuntu AMI on t2.micro instance in the default VPC.  
 Replace the string `YOUR_KEY_NAME` with the name of your key pair created above. You can find it using the command `aws ec2 describe-key-pairs | grep KeyName`.
 
 
 You can pick an image in your region, by running the below, 
 
 ```
-aws ec2 describe-images  --filters  Name=name,Values='ubuntu/images/hvm-ssd/ubuntu-bionic-18.04*' Name=architecture,Values=x86_64   | head -100
+aws ec2 describe-images  --filters  Name=name,Values='ubuntu/images/hvm-ssd/ubuntu-bionic-22.04*' Name=architecture,Values=x86_64   | head -100
 ```
 
 Use this to create the instance. 
@@ -130,7 +131,7 @@ Use this to create the instance.
 ```
 # Create the instance
 # note that 'your_keypair' is the name of your key you created above without the .pem extension
-aws ec2 run-instances --image-id YOUR-AMI-ID --instance-type t2.large --security-group-ids YOUR_PUBLIC_GROUP_ID --associate-public-ip-address --key-name your_keypair
+aws ec2 run-instances --image-id YOUR-AMI-ID --instance-type t2.micro --security-group-ids YOUR_PUBLIC_GROUP_ID --associate-public-ip-address --key-name your_keypair
 
 # Retrieve the Public DNS name
 aws ec2 describe-instances | grep PublicDnsName
