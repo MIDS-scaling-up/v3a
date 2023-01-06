@@ -1,4 +1,4 @@
-# Homework 3 - Containers, Kubernetes, and IoT/Edge
+# Homework 2 - Containers, Kubernetes, and IoT/Edge
 
 ## Please note that this homework is graded
 
