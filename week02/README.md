@@ -1,15 +1,7 @@
-# Lecture 2
+# Lecture 3
 Virtual machines, containers, orchestration and Kubernetes, edge, and cloud native.
 
 ## Reading
-
-### Introduction to cloud technologies:
-* Berkeley Cloud Resource Center: https://technology.berkeley.edu/cloud
-* OpenStack: https://docs.openstack.org/security-guide/introduction/introduction-to-openstack.html
-* Containers: https://www.docker.com/resources/what-container
-* Kubernetes: https://kubernetes.io/docs/tutorials/kubernetes-basics/
-* Openshift: https://www.openshift.com/learn/what-is-openshift
-* Google Colab: https://colab.research.google.com/notebooks/intro.ipynb#scrollTo=5fCEDCU_qrC0
 
 ### Virtual Machines
 
@@ -29,6 +21,11 @@ https://docs.docker.com/get-started/overview/
 https://mkdev.me/en/posts/the-tool-that-really-runs-your-containers-deep-dive-into-runc-and-oci-specifications
 
 https://www.docker.com/blog/what-is-containerd-runtime/
+
+
+### Installing Docker
+
+https://docs.docker.com/get-docker/ 
 
 
 ### Kubernetes
