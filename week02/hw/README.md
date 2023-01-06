@@ -33,7 +33,7 @@ For details on using MQTT with Apline and Ubuntu, refer to Lab 2.
 [OpenCV](https://opencv.org/) is THE library for computer vision.  At the moment it has fallen behind the Deep Learning curve, but it could catch up at any moment.  For traditional, non-DL image processing, it is unmatched.
 
 
-Refer to Lab 2 for how to get started with OpenCV and some addtional hints for getting started with OpenCV in a container are [here](https://github.com/rdejana/w251-hints/tree/master/hw3), if you need them.
+Refer to Lab 2 for how to get started with OpenCV and some addtional hints for getting started with OpenCV in a container are [here](https://github.com/rdejana/w251-hints/tree/master/hw3), if you need them (the link says hw3, which is fine since the new hw2 is the old hw3).
 
 ### Facial detection with OpenCV 
 We suggest that you use a simple pre-trained frontal face HAAR Cascade Classifier [documented here](https://docs.opencv.org/3.4.1/d7/d8b/tutorial_py_face_detection.html).  There is no need to detect eyes,just the face.  Notice how simple it is to use:
@@ -61,7 +61,7 @@ Note, you can find the OpenCV cascade files on your Jetson in the directory /usr
 On the Jetson, your containers should communicate via Kubernetes services, see Lab 2 for details.  On the cloud side, you should use a user defined network to enable your containers to easily communicate.  Please review the [docker networking tutorial](https://docs.docker.com/network/network-tutorial-standalone/#use-user-defined-bridge-networks).  The idea is that you will need to create a local bridge network and then the containers you will create will join it.
 
 ### Overall architecture / flow
-Your overall application flow / architecture should be something like: ![this](hw3.png).
+Your overall application flow / architecture should be something like: ![this](hw2.png).
 
 ### Bonus Points
 You can recieve an extra 10 bonus points for using Kubernetes on the cloud side rather than Docker.
