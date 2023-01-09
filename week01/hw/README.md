@@ -211,9 +211,27 @@ Now, point your browser to http://my_vm_ip:8800  and use the token to log in.
 Once you are all done, stop and remove the container running notebook and terminate the instance to avoid extra charges
 You can take an AMI image snapshot before terminating the instance.
 
+# PART2 - Setup and run Sagemaker Example (free tier)
+NOTE: Sagemaker free tier is available on your new AWS account when you try Sagemaker first time with limited resources. Make sure to check the free tier eligibility and adhere to limits before attempting this part of HW here-->https://aws.amazon.com/sagemaker/pricing/. If not, let the instructors know.
+
+This HW further builds on using public cloud services with a primer on AWS Sagemaker. Sagemaker is a fully managed Machine Learning Service enabling 
+to easily build, train and deploy ML models with an integrated Jupyter Notebook instance.~~
+
+-   Readup details on Sagemaker. https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-preprocess-data.html
+
+-   Create Sagemaker notebook instance.  https://docs.aws.amazon.com/sagemaker/latest/dg/gs-console.html
+
+-   Create a jupyter notebook and save it. https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-prepare.html
+
+-   Run the end to end Example https://github.com/aws/amazon-sagemaker-examples/blob/master/sagemaker-python-sdk/1P_kmeans_highlevel/kmeans_mnist.ipynb
+(This incl. downloading MNIST dataset to your account's default S3 Object storage)
+
+-   Once complete, Login to your account and check the resources the example created
+
+-   Cleanup the environment by deleting the deployed endpoint, Notebook instance and S3 to not incur AWS charges
 
 
-# PART2 - Pricing
+# PART3 - Pricing
     
 #### Spot pricing
 
