@@ -52,8 +52,7 @@ to enable CLI and API access.
     -   Ensure that your new group is selected, then click the "Next" button
     -   Do not add any Tags
     -   Click the "Create User" button
-    -   Select to have User Access and Secret Key created and download
-        the details to xls
+    -   Download the created credentials (Access and Secret Key details) as .csv
     -   On your workstation (Mac or windows), download, install and configure
         AWS CLI-v2 using the new User credentials you just created.
         Follow the instructions from the link below.
