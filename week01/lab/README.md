@@ -24,7 +24,7 @@ avoid incurring extra costs.
 -   Once complete, Login to your account
 
 -   Once you receive your credit (not on day 1, but eventually), click on your account id (top right) and chose \"My Account\" -\"Credits\"
--   
+
 -   Until the credits arrive, we will focus on the free tier resources
 
 -   Insert the promotion code shared by your instructor and Redeem. You
