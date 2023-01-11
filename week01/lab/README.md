@@ -123,7 +123,7 @@ Replace the string `YOUR_KEY_NAME` with the name of your key pair created above.
 You can pick an image in your region, by running the below, 
 
 ```
-aws ec2 describe-images  --filters  Name=name,Values='ubuntu/images/hvm-ssd/ubuntu-bionic-22.04*' Name=architecture,Values=x86_64   | head -100
+aws ec2 describe-images  --filters  Name=name,Values='ubuntu/images/hvm-ssd/ubuntu-bionic-18.04*' Name=architecture,Values=x86_64   | head -100
 ```
 
 Use this to create the instance. 
