@@ -59,7 +59,8 @@ to enable CLI and API access.
         Follow the instructions from the link below.
 
         <https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html>
-        -aws configure (enter access key, security key and select region such as us-east-1)
+        
+    -   Run `aws configure` (enter access key, security key and select region such as us-east-1)
 
 -  Go to Services-EC2-Keypairs
 
