@@ -76,4 +76,4 @@ What to submit to ISVC:
 
 A link to the repository of your for this homework [private repo please] which should include your code, Dockerfiles, Docker command used, and Kubernetes YAML files.  In addition, the answers to the 2 questions (eg. bullet point #4 above) should be included.
 
-A publicly accessble http link to the location of your faces in the object storage. 
+A publicly accessble http link to the location of your faces in the object storage or submit the actual image files.
