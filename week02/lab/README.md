@@ -13,7 +13,7 @@ attempt to configure usb passthrough (https://superuser.com/questions/1648046/ho
 - For Windows and Mac workstations, you have created an Ubuntu based virtual machine.  For Intel based sytems, use https://ubuntu.com/download/desktop and download the LTS version.  For Apple Silcon based systems, download from: https://cdimage.ubuntu.com/focal/daily-live/current/ or https://cdimage.ubuntu.com/jammy/daily-live/current/.  Make sure to install the 64-bit ARM image.  You'll want to make sure you've installed the OS vs just booting from the live cd.
 - Your VM will need to have Docker installed, see https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository for details.
 - Pip3 is installed in your VM. This can be done via the command  `sudo apt install python3-pip`.
-- USB camera is plugged in and available or use your workstation's integrated camera.
+- USB camera is plugged in and available or use your workstation's integrated camera.  If you are using a mac with the latest version of macOS, the integrated camera may be device 2.
 - A DockerHub account.  DockerHub will be used as your registry, a place to publish and share images.  You may register for the account at https://hub.docker.com.
 - Install a SSH server (optional).  Run the command `apt update && apt install opensssh-server`.  This will allow you to ssh into your VM directly from your host.
 - Configure Docker group (optional). By default, Docker is owned by and runs as the user root. This requires commands to be executed with sudo. If you don't want to use sudo, a group may be used instead. This group group grants privileges equivalent to the root user. For details on how this impacts security in your system, see Docker Daemon Attack Surface (https://docs.docker.com/engine/security/#docker-daemon-attack-surface) . The examples will assume this has been done. If you do not do this, you'll need to prefix the docker commands with sudo.our workstaion.
@@ -225,8 +225,8 @@ import cv2
 
 
 # the index depends on your camera setup and which one is your USB camera.
-# you may need to change to 1 depending on your local config
-cap = cv2.VideoCapture(0)
+# you may need to change to 1 or 2 depending on your machine.
+cap = cv2.VideoCapture(0) # with macOS and an iphone, this might be your iphone camera
 
 while(True):
     # Capture frame-by-frame
