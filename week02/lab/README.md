@@ -15,7 +15,7 @@ attempt to configure usb passthrough (https://superuser.com/questions/1648046/ho
 - Pip3 is installed in your VM. This can be done via the command  `sudo apt install python3-pip`.
 - USB camera is plugged in and available or use your workstation's integrated camera.  If you are using a mac with the latest version of macOS, the integrated camera may be device 2.
 - A DockerHub account.  DockerHub will be used as your registry, a place to publish and share images.  You may register for the account at https://hub.docker.com.
-- Install a SSH server (optional).  Run the command `apt update && apt install opensssh-server`.  This will allow you to ssh into your VM directly from your host.
+- Install a SSH server (optional).  Run the command `apt update && apt install opensssh-server`.  If you are using ubuntu 22.04, you'll install using the command `apt install ssh`.  This will allow you to ssh into your VM directly from your host.
 - Configure Docker group (optional). By default, Docker is owned by and runs as the user root. This requires commands to be executed with sudo. If you don't want to use sudo, a group may be used instead. This group group grants privileges equivalent to the root user. For details on how this impacts security in your system, see Docker Daemon Attack Surface (https://docs.docker.com/engine/security/#docker-daemon-attack-surface) . The examples will assume this has been done. If you do not do this, you'll need to prefix the docker commands with sudo.our workstaion.
 
 Create the group docker. Note, this group may already exist.
