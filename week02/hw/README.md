@@ -2,7 +2,7 @@
 
 ## Please note that this homework is graded
 
-### Note: This homework was originally designed for a Jetson Device, but most likely you'll be using a virtual machine running on your workstatation.  See lab2's README.md for details.  In the instructions, replace Jetson with your local VM.  As OpenCV is most likely not installed in your VM, you may find the cascade file at https://github.com/opencv/opencv/tree/master/data/haarcascades. 
+### Note: This homework was originally designed for a Jetson Device, but most likely you'll be using a virtual machine running on your workstation.  See lab2's README.md for details.  In the instructions, replace Jetson with your local VM.  As OpenCV is most likely not installed in your VM, you may find the cascade file at https://github.com/opencv/opencv/tree/master/data/haarcascades. 
 
 ## Instructions
 
