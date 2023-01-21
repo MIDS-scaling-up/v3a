@@ -485,7 +485,7 @@ CMD ["mosquitto","-c","/etc/mosquitto/mosquitto.conf"]
 Make sure that you specify a tag for your image!
 
 
-You'll want to build the image and push it into your DockerHub registry, e.g. `docker build -t rdejana/mosquitto:v1 .` and `docker push rdejana/mosquitto:v1`.
+You'll want to build the image and push it into your DockerHub registry, e.g. `docker build -t rdejana/mosquitto:v1 .` and `docker push rdejana/mosquitto:v1`. Note that you should have a valid tag for your image, `v1` in this example.
 
 Next, you'll want to create a YAML file for the Kubernetes Deployment. Using the following as an example:
 ```
@@ -505,7 +505,7 @@ spec:
     spec:
       containers:
       - name: mosquitto
-        image: <yourImageHere>
+        image: <yourImageHere>:<yourTagHere>
         ports:
         - containerPort: 1883
 ```
@@ -648,7 +648,7 @@ spec:
         image: <yourImage>
 ```
 
-Watch the logs of your listener, `kubectl logs -f <podName>` and run your publisher.  You should see that your listener connected via the service name and your message show up!
+Watch the logs of your listener, `kubectl logs -f <podName>` and run your publisher.  You should see that your listener connected via the service name and your message show up!  If not, the logs command will help you troubleshoot your pod[s].
 
 You can now delete your serivce and deployments.
 
