@@ -1,0 +1,8 @@
+FROM nvcr.io/nvidia/pytorch:22.12-py3
+
+RUN apt update
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN pip uninstall -y opencv
+RUN apt install -y python3-opencv
+ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu/
