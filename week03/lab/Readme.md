@@ -5,7 +5,7 @@ DETR in action
 This could be local or in the Cloud.
 
 ### Ensure Docker is installed
-If the image comes with Docker pre-installed, there's nothing to do here. Else, install docker as we discussed in [section 1] (https://github.com/MIDS-scaling-up/v3a/tree/master/week01/hw)
+If the image comes with Docker pre-installed, there's nothing to do here. Else, install docker as we discussed in [section 1](https://github.com/MIDS-scaling-up/v3a/tree/master/week01/hw)
 
 ### Ensure desktop is installed
 If the image comes with Ubuntu desktop, nothing to do here. Else, install it, e.g. 
