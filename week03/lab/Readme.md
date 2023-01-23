@@ -45,7 +45,7 @@ vncserver -kill :1
 vncserver -geometry 1920x1080 :1
 ```
 ### Connect to desktop
-Use remmina or screensharing for mac, connect to port 5901. Open up a terminal and enter ```xhost +``` to allow new X windows.
+Use remmina or screensharing for mac, connect to port 5901. (verify that you have an inbound rule for connectivity into port 5901 within the security group that is controlling your instance) Open up a terminal and enter ```xhost +``` to allow new X windows.
 If the above does not work, use a [VNC Client](https://www.realvnc.com/en/connect/download/viewer/) and connect to your desktop (54.173.249.104:1 or ec2-54-173-249-104.compute-1.amazonaws.com:1) notice that those IP addresses are an example, your case would be different values).
 
 ### Set up the code
