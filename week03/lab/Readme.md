@@ -57,6 +57,10 @@ git clone https://github.com/MIDS-scaling-up/v3a
 cd /data/v3a/week03/lab
 # build Docker image (this will take a few minutes)
 docker build -t pt -f Dockerfile.pt . 
+# if it takes too long, just pull the ready image, e.g. 
+docker pull w251/detr
+docker tag w251/detr pt
+# Please note that this image is x86 only. If you are on an an Apple hardware Mac you will need to build.
 ```
 ### Download a video clip for processing
 For instance, try this URL: https://www.nps.gov/media/video/view.htm?id=5B11A65B-2E51-4377-9E52-367426BAE6A1
