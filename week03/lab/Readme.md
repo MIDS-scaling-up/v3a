@@ -2,19 +2,19 @@
 DETR in action
 
 ## Provision an Ubuntu Desktop VM
-This could be local or in the Cloud.
+This could be local or in the Cloud. Assuming you already have one, just start it up.
 
 ### Ensure Docker is installed
-If the image comes with Docker pre-installed, there's nothing to do here. Else, install docker as we discussed in [section 1](https://github.com/MIDS-scaling-up/v3a/tree/master/week01/hw)
+Your local VM should have Docker pre-installed, so there's nothing to do here. Else, install docker as we discussed in [section 1](https://github.com/MIDS-scaling-up/v3a/tree/master/week01/hw)
 
 ### Ensure desktop is installed
-If the image comes with Ubuntu desktop, nothing to do here. Else, install it, e.g. 
+Your local VM comes with Ubuntu desktop, so nothing to do here. Else, install it, e.g. 
 ```
 # become root
 apt update
 apt install -y ubuntu-desktop tightvncserver gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
 ```
-### Configure desktop if not configured
+### Configure desktop if not configured (cloud only)
 We are using VNC here and loosely following [this guide](https://ubuntu.com/tutorials/ubuntu-desktop-aws):
 ```
 vncserver:1
@@ -44,7 +44,7 @@ vncserver -kill :1
 
 vncserver -geometry 1920x1080 :1
 ```
-### Connect to desktop
+### Connect to desktop (cloud only)
 Use remmina or screensharing for mac, connect to port 5901. (verify that you have an inbound rule for connectivity into port 5901 within the security group that is controlling your instance) Open up a terminal and enter ```xhost +``` to allow new X windows.
 If the above does not work, use a [VNC Client](https://www.realvnc.com/en/connect/download/viewer/) and connect to your desktop (54.173.249.104:1 or ec2-54-173-249-104.compute-1.amazonaws.com:1) notice that those IP addresses are an example, your case would be different values).
 
@@ -65,6 +65,8 @@ For instance, try this URL: https://www.nps.gov/media/video/view.htm?id=5B11A65B
 sh run_pt.sh
 # now inside the container
 cd /data/v3a/week03/lab
-# edit detr.py and add the downloaded clip filename to the feed variable
+# edit detr.py and add the downloaded clip filename to the feed variable.. 
+# if you are on a local VM in a Mac, use 1 as your feed.
+# also, edit the device variable if you are running on CPU..
 python3 detr.py
 ```
