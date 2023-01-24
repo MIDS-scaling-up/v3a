@@ -1,7 +1,7 @@
 # Lab 3
 DETR in action
 
-## Provision a VM
+## Provision an Ubuntu Desktop VM
 This could be local or in the Cloud.
 
 ### Ensure Docker is installed
