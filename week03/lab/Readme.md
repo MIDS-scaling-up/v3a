@@ -2,7 +2,7 @@
 DETR in action
 
 ## Provision an Ubuntu Desktop VM
-This could be local or in the Cloud. Assuming you already have one, just start it up.
+This could be local or in the Cloud. Assuming you already have one, just start it up. The main disk needs to be 35GB or larger (can be changed in VM settings)
 
 ### Ensure Docker is installed
 Your local VM should have Docker pre-installed, so there's nothing to do here. Else, install docker as we discussed in [section 1](https://github.com/MIDS-scaling-up/v3a/tree/master/week01/hw)
