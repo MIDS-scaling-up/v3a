@@ -56,8 +56,10 @@ cd /data
 git clone https://github.com/MIDS-scaling-up/v3a
 cd /data/v3a/week03/lab
 # build Docker image (this will take a few minutes)
+# IF YOU ARE ON An APPLE HW (not Intel) MAC, please edit the Dockerfile.pt by using this line
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/aarch64-linux-gnu/
 docker build -t pt -f Dockerfile.pt . 
-# if it takes too long, just pull the ready image, e.g. 
+# if it takes too long, just pull the ready image (x86 only), e.g. 
 docker pull w251/detr
 docker tag w251/detr pt
 # Please note that this image is x86 only. If you are on an an Apple hardware Mac you will need to build.
