@@ -9,5 +9,8 @@ RUN apt install -y python3-opencv
 # If you are on x86 (e.g. Intel mac) use this:
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu/
 
+# this works on a MAC M1 chip with an Ubuntu VM
+#ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/aarch64-linux-gnu/
+
 # if you are on an ARM Mac (Apple hardware) use this line instead:
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/aarch64-linux-gnu/
