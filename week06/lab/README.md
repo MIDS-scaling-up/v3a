@@ -5,4 +5,4 @@ This is a very simple image classification example based on [PTQ_example.ipynb](
 
 ### Running 
 1. Create an AWS VM with GPU enabled*
-2. Once the VM is created nvcr.io/nvidia/tensorflow:22.12-tf2-py3
+2. Once the VM is created nvcr.io/nvidia/tensorflow:22.12-tf2-py3 (review https://github.com/MIDS-scaling-up/v3/tree/main/week05/hw)
