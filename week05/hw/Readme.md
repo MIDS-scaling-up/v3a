@@ -3,7 +3,10 @@
 This is a graded homework.
 
 HOWEVER, WE NEED TO WAIT TILL WE GET THE CREDITS BEFORE WE DO THIS
+INSTEAD, please submit working Google Colab notebooks for the lab, parts 1 (cifar pytorch), 2 (cinic pytorch), 3 (cifar pytorch lightning).
+You will need to download the cinic dataset from Kaggle or from the URL distributed in class and place it on your google drive.
 
+# DO NOT WORK THE SECTION BELOW YET, IT IS NOT ASSIGNED
 ### The goal
 The goal of the homework is to train an image classification network on the ImageNet dataset to the Top 1 accuracy of 60% or higher.
 
