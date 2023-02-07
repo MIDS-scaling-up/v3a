@@ -217,6 +217,18 @@ and a more complicated example:
 ```
 gst-launch-1.0 -e compositor name=comp  ! ximagesink sync=false v4l2src device=/dev/video2 ! videoconvert ! videoscale  ! video/x-raw, width=640, height=360 ! comp.sink_0 videotestsrc pattern="snow" ! video/x-raw, framerate=60/1, width=200, height=150 ! comp.sink_1
 ```
+
+We can also integrate with other programs like OpenCV. Run the command `gst-inspect-1.0 opencv` to see what OpenCV plugins are available.
+
+Try the following
+```
+gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! facedetect ! videoconvert ! xvimagesink sync=false -e
+
+gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! edgedetect ! videoconvert ! xvimagesink sync=false -e
+
+gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! skindetect ! videoconvert ! xvimagesink sync=false -e
+```
+
 GStreamer can be used to stream media (e.g. create your own IP camera) between devices, however to keep things simple, you'll stream from your Jetson to your Jetson.
 
 This will require two shell windows.
@@ -225,7 +237,7 @@ In the first window, run the following:
 ```
 gst-launch-1.0 v4l2src device=/dev/video2 ! video/x-raw, format=YUY2, width=640, height=480, framerate=30/1 ! videoscale ! video/x-raw, format=YUY2, width=320, height=240 ! videoconvert ! x264enc ! h264parse ! rtph264pay config-interval=1 ! udpsink host=127.0.0.1 port=5000 sync=false
 ```
-This starts the "server" broadcasting the packets (udp) to the IP Address 127.0.01 on port 8001. The server broadcasts the stream using RTP that hs h265 ecnoded.
+This starts the "server" broadcasting the packets (udp) to the IP Address 127.0.01 on port 8001. The server broadcasts the stream using RTP that is h264 ecnoded.
 
 In the second window, run the following: 
 
