@@ -1,24 +1,10 @@
-# W251 - Deep Learning in the Cloud and at the Edge
+# Week 5. Deep Learning Frameworks
 
-This hands-on course introduces data scientists to technologies related to building and operating live, high throughput deep learning applications running on powerful servers in the cloud as well on smaller and lower power devices at the edge of the network. The material of the class is a set of practical approaches, code recipes, and lessons learned. It is based on the latest developments in the industry and industry use cases as opposed to pure theory.  
-  
-The Spring 2023 class revision no longer requires that students purchase a physical edge device. We will use AWS accounts / credits and smaller virtual machines
-to emulate edge devices. Once the chip shortage subsides, we will hopefully return to physical edge devices.
+Key Components of a Deep Learning Framework. Tensors. Data Loaders. Optimizers. The Training Loop. The Validation Loop. Eager Mode vs. 
+Graph Mode. Inference Runtimes. TensorFlow 1.0, TensorFlow 2.0, PyTorch, PyTorch Lightning, and the Hugging Face NLP Frameworks.
 
-The syllabus and homeworks are as follows: 
-  
-Week | Content 
---- | --- 
-01| Introduction, Cloud Fundamentals
-02| Introduction to Containers
-03| Google Colab, Kaggle, HuggingFace, Object Detection, DETR
-04| Deep Learning 101
-05| Deep Learning Frameworks
-06| Optimizing Models for the Edge and GStreamer
-07| Deep Learning 201
-08| Datasets and Dataset Processing
-09| HPC, MPI, and Multinode / MultiGPU Training
-10| Generative Adversarial Networks (GANs)
-11| Deep Reinforcement Learning
-12| Automatic Speech Recognition and Natural Language Processing
-13| Applying AI to Real World Applications
+Reading:
+
+* [PyTorch 60-minute blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html) (training, glance through)
+* [Lightning in 15 min](https://pytorch-lightning.readthedocs.io/en/latest/starter/introduction.html) (overview, glance through)
+* [Transfer Learning in NLP](https://www.youtube.com/watch?v=t86G11tfVNw) (presentation, glance through)
