@@ -265,4 +265,4 @@ This is a very simple image classification example based on [PTQ_example.ipynb](
 
 Think about and note the changes in inference peformance. Feel free to replace the model used with a different one and rerun.
 
-**DELETE YOUR VM when the lap is complete!**
+**DELETE YOUR VM when the lab is complete!**
