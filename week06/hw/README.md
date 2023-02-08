@@ -61,7 +61,7 @@ What was your average throughput for native model, for the tensor-rt FP32 and FP
 
 Next, you'll want to leverge transfer learning to train your own model.  See https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html for an example. You may also look at [training.md](training.md) for addional examples.
 
-Once you have your model trained, use torch-trt.ipynb notebook as starting point and optimize your model, producing both FP32 and FP16 models.  How does the peformace compare to your native model?
+Once you have your model trained, use torch-trt.ipynb notebook as starting point and optimize your model, producing both FP32 and FP16 models.  How does the peformace compare to your native model?  Note, if you wish to use TensorFlow and TF-TRT instead, you may.
 
 
 
