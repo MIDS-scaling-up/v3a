@@ -50,7 +50,7 @@ For part 1, you'll need to submit:
 
 In lab, you saw to how use leverage TensorRT with TensorFlow.  For this homework, you'll look at another way to levarage TensorRT with Pytorch.
 
-1. Procure a virtual machine in AWS - we recommend an A10 GPU and 32 GB of RAM (e.g. g4dn.2xlarge). Use the Nvidia Deep Learning AMI so that the pre-requisites are pre-installed for you. We recommend using the latest [nvidia pytorch container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch).  When starting the container, make sure that port 8888 is bound to the host, e.g. `-p 8888:8888` and that your firewall allows ingress on port 8888.
+1. Procure a virtual machine in AWS - we recommend a T4 or A10 GPU and 32 GB of RAM (e.g. g4dn.2xlarge). Use the Nvidia Deep Learning AMI so that the pre-requisites are pre-installed for you. We recommend using the latest [nvidia pytorch container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch).  When starting the container, make sure that port 8888 is bound to the host, e.g. `-p 8888:8888` and that your firewall allows ingress on port 8888.
 2. Clone this reposisotry: `git clone https://github.com/MIDS-scaling-up/v3a`.
 3. Start Jupyter Lab with the command: `jupyter lab --ip 0.0.0.0 -allow-root`.  
 4. Login to your lab instance.
