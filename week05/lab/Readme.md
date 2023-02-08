@@ -7,7 +7,7 @@ This week we will practice writing basic training loops. Please use Google Colab
 The easiest way to use Google Colab is to install the [Google Colab Chrome plugin](https://chrome.google.com/webstore/detail/open-in-colab/iogfkhleblhcpcekbiedikdehleodpjo?hl=en_). Once installed, you can navigate to the desired Jupyter notebook in Github, and then click the Extensions icon to the right of the URL location in the browser and select 'Open in Colab'
 
 ### 2. Validate that a GPU is available (Google Colab)
-Please recall or look up the PyTorch and TensorFlow 2 commands that tell you whether you have at least one GPU available. It's a good idea to check because some repos will silently fall through to the CPU and run slowly. If your GPU is not detected, click Runtime and Change Runtime type. How can you see the model of yor GPU?
+Please recall or look up the PyTorch and TensorFlow 2 commands that tell you whether you have at least one GPU available. It's a good idea to check because some repos will silently fall through to the CPU and run slowly. If your GPU is not detected, click Runtime and Change Runtime type. How can you see the model of your GPU?
 
 ### 3. PyTorch - CIFAR10 classification
 In this section, we will fill in the provided template and build an image classifier for the CIFAR10 dataset, which contains 60,000 32x32 color images that are sorted into 10 classes. Your goal is to quickly train a classifier from random weights for about 20 epochs. You don't need to train all the way to the end, just run it for 20 epochs to get a feel for how well it converges. Make sure that your _validation_ loss declines.  Make sure that you adjust the model architecture to the number of classes in CIFAR10 (10)!
