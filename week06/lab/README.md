@@ -55,7 +55,7 @@ The patterns have an index number and a name, either may be used.  For example b
 
 Explore the various patterns.
 
-The first example demostrated running a single pipeline, but we can do even more.  The following example runs runs two videotestsrc pipelines:
+The first example demostrated running a single pipeline, but we can do even more.  The following example runs two videotestsrc pipelines:
 ```
 gst-launch-1.0 videotestsrc ! xvimagesink videotestsrc pattern=ball ! xvimagesink
 ```
