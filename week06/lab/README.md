@@ -146,7 +146,7 @@ In this example, I'm using a `videoconvert`.  This is needed as on my machine, `
 
 Take note of the property `sync=false` and the flag `-e`.  Setting sync to false, incoming samples will be played as fast as possible, and the -e flag forces the stream to close before shutting down the pipeline.
 
-Now that we have access to the camera, we can explore what we can do.  Now the the camera is the limit; if your camera doesn't support 60 FPS and 4K, there is no use asking for it.  
+Now that we have access to the camera, we can explore what we can do.  Now the camera is the limit; if your camera doesn't support 60 FPS and 4K, there is no use asking for it.  
 
 Cameras may support more than one FPS option (mine doesn't but we'll pretend) .
 
