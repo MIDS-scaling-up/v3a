@@ -62,7 +62,7 @@ gst-launch-1.0 videotestsrc ! xvimagesink videotestsrc pattern=ball ! xvimagesin
 
 Edge devices such as the Nvidia Jetson line have their own hardware accellerated plugins.  While not covered in this lab, these plugins can be used to improve the performace of a varity of tasks including encoding, decoding and image transformations.
 
-To use a camera with GStreamer, you mist need to know what is available.  You can get infomration about your available camera or cameras through `gst-device-monitor-1.0` applicaion.
+To use a camera with GStreamer, you need to know what is available.  You can get infomration about your available camera or cameras through `gst-device-monitor-1.0` applicaion.
 
 Run `gst-device-monitor-1.0 Video/Source` to see your cameras and their capablities.  For example, my VM has the following:
 ```
