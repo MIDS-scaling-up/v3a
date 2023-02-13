@@ -172,7 +172,6 @@ Now what can we do with the video?  Let's start with scaling the image.
 ```
  gst-launch-1.0 v4l2src device=/dev/video2  ! videoscale ! video/x-raw, width=320, height=240 ! videoconvert ! xvimagesink sync=false -e
 ```
-Now we can try converting the image to grey scale
 Say we want to see the image in grayscale.
 ```
 gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! video/x-raw,format=GRAY8 ! videoconvert  ! xvimagesink sync=false -e
