@@ -16,7 +16,7 @@ While not covered here, audio is also supported.  See the Gstreamer documentatio
  
 
 ### Basics
-At its core GStreamer uses pipelines, where a pipelie is a list of elements separated by exclamation marks (!). 
+At its core GStreamer uses pipelines, where a pipeline is a list of elements separated by exclamation marks (!). 
 
 An element can be thought of as a black box with one or more pads, the element's interface to the outside world; data comes in on one side, the data element does something with it and something else comes out the other side.  There are 3 types of elements, source, filter and filter-like, and sink elements.
 
