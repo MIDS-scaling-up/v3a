@@ -47,19 +47,19 @@ Finally, sink elements are the end of a pipeline; they accept an input and outpu
 
 The first pipeline will be a simple video test image. 
 ```
-gst-launch-1.0 videotestsrc ! xvimagesink
+gst-launch-1.0 videotestsrc ! autovideosink
 ```
 
-This will display a classic "test pattern". The command is composed of two elements, the videotestsrc and a video sink, xvimagesink.
+This will display a classic "test pattern". The command is composed of two elements, the videotestsrc and a video sink, autovideosink.  Note, autovideosink will automatically find the correct sink, e.g. xvimagesink or ximagesink.  We'll use this to help with portablity between VMWare and Parellels.  If you have any issues, try using xvimagesink or ximagesink directly.
 
 Running `gst-inspect-1.0 videotestsrc` will provide some additional information on the src and supported properties.  In this case, we are interested in the property `pattern`.
-The patterns have an index number and a name, either may be used.  For example both `gst-launch-1.0 videotestsrc pattern=snow ! xvimagesink` and `gst-launch-1.0 videotestsrc pattern=0 ! xvimagesink` produce the same thing.
+The patterns have an index number and a name, either may be used.  For example both `gst-launch-1.0 videotestsrc pattern=snow ! autovideosink` and `gst-launch-1.0 videotestsrc pattern=0 ! autovideosink` produce the same thing.
 
 Explore the various patterns.
 
 The first example demonstrated running a single pipeline, but we can do even more.  The following example runs two videotestsrc pipelines:
 ```
-gst-launch-1.0 videotestsrc ! xvimagesink videotestsrc pattern=ball ! xvimagesink
+gst-launch-1.0 videotestsrc ! autovideosink videotestsrc pattern=ball ! autovideosink
 ```
 
 Edge devices such as the Nvidia Jetson line have their own hardware accelerated plugins. While not covered in this lab, these plugins can be used to improve the performance of a variety of tasks including encoding, decoding and image transformations.
@@ -140,9 +140,9 @@ You can see that I have 2 cameras available, each with a different set of capabi
 For the rest of the camera-based examples, you'll need to use values that work with your actual hardware; I'll be using /dev/video2.
 
 ```
-gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! xvimagesink sync=false -e
+gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! autovideosink sync=false -e
 ```
-In this example, I'm using a `videoconvert`.  This is needed as on my machine, `xvimagesink` does not support the image format `YUY2` (however `NV12` is). Videoconvert finds a format that xvimagesink as converts as needed.  If no conversion is needed, this is simply a pass through.  If you'd like to see that videoconvert is using, add the `-v` flag to your command.
+In this example, I'm using a `videoconvert`.  This is needed as on my machine, `autovideosink` does not support the image format `YUY2` (however `NV12` is). Videoconvert finds a format that xvimagesink as converts as needed.  If no conversion is needed, this is simply a pass through.  If you'd like to see that videoconvert is using, add the `-v` flag to your command.
 
 
 
@@ -154,17 +154,17 @@ Cameras may support more than one FPS option (mine doesn't but we'll pretend) .
 
 Let's start by asking for 30 FPS.  Note, you'll need to use the` X/1` for framerates. I'm using the specific caps for my camera.
 ```
-gst-launch-1.0 v4l2src device=/dev/video2 ! video/x-raw, format=YUY2, width=1280, height=720, framerate=30/1 ! videoconvert ! xvimagesink sync=false -e
+gst-launch-1.0 v4l2src device=/dev/video2 ! video/x-raw, format=YUY2, width=1280, height=720, framerate=30/1 ! videoconvert ! autovideosink sync=false -e
 ```
 Notice that the size of the window has changed.  Now what if we want 30 FPS at 1920x1080?  Let's find out.
 ```
-gst-launch-1.0 v4l2src device=/dev/video2 ! video/x-raw, format=YUY2, width=1920, height=1080, framerate=30/1 ! videoconvert ! xvimagesink sync=false -e
+gst-launch-1.0 v4l2src device=/dev/video2 ! video/x-raw, format=YUY2, width=1920, height=1080, framerate=30/1 ! videoconvert ! autovideosink sync=false -e
 ```
 and for me, it fails.  If we look above, should be clear why; my camera doesn't support that.  
 
 Let's go the other way and ask for 640x480.
 ```
-gst-launch-1.0 v4l2src device=/dev/video2 ! video/x-raw, format=YUY2, width=640, height=480, framerate=30/1 ! videoconvert ! xvimagesink sync=false -e
+gst-launch-1.0 v4l2src device=/dev/video2 ! video/x-raw, format=YUY2, width=640, height=480, framerate=30/1 ! videoconvert ! autovideosink sync=false -e
 ```
 
 And works as expected.   Feel free to explore what your camera can do!
@@ -172,28 +172,28 @@ And works as expected.   Feel free to explore what your camera can do!
 
 Now what can we do with the video?  Let's start with scaling the image.
 ```
- gst-launch-1.0 v4l2src device=/dev/video2  ! videoscale ! video/x-raw, width=320, height=240 ! videoconvert ! xvimagesink sync=false -e
+ gst-launch-1.0 v4l2src device=/dev/video2  ! videoscale ! video/x-raw, width=320, height=240 ! videoconvert ! autovideosink sync=false -e
 ```
 Say we want to see the image in grayscale.
 ```
-gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! video/x-raw,format=GRAY8 ! videoconvert  ! xvimagesink sync=false -e
+gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! video/x-raw,format=GRAY8 ! videoconvert  ! autovideosink sync=false -e
 ```
 Why is the extra videoconvert needed?  Try:
 ```
-gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw,framerate=30/1 ! videoconvert ! video/x-raw,format=GRAY8  ! xvimagesink sync=false -e
+gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw,framerate=30/1 ! videoconvert ! video/x-raw,format=GRAY8  ! autovideosink sync=false -e
 ```
 Fails as we need to make sure the video is in a format that xvimagesink can understand, e.g. BGRx.
 
 We can also do fun things like flip the image:
 ```
-gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! videoflip method=rotate-180 ! videoconvert ! xvimagesink sync=false -e
+gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! videoflip method=rotate-180 ! videoconvert ! autovideosink sync=false -e
 ```
 
 Now let's play with some "special effects".
 ```
-gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! warptv ! videoconvert ! xvimagesink sync=false -e
+gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! warptv ! videoconvert ! autovideosink sync=false -e
 
-gst-launch-1.0  videotestsrc ! agingtv scratch-lines=15 ! videoconvert ! xvimagesink -e
+gst-launch-1.0  videotestsrc ! agingtv scratch-lines=15 ! videoconvert ! autovideosink -e
 
 ```
 Inspect both agingtv and warptv to see what other effects can be applied.
@@ -201,33 +201,33 @@ Inspect both agingtv and warptv to see what other effects can be applied.
 
 Now add some text to the video: 
 ```
-gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! textoverlay text="Hello from GST" valignment=bottom halignment=left font-desc="Sans, 40" ! xvimagesink sync=false -e
+gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! textoverlay text="Hello from GST" valignment=bottom halignment=left font-desc="Sans, 40" ! autovideosink sync=false -e
 ```
 
 Now what having an image be routed to more than one window.  This uses tee and queue.
 ```
-gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! queue ! tee name=t t. ! queue ! xvimagesink sync=false t. ! queue ! videoflip method=horizontal-flip ! xvimagesink sync=false -e
+gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! queue ! tee name=t t. ! queue ! autovideosink sync=false t. ! queue ! videoflip method=horizontal-flip ! autovideosink sync=false -e
 ```
 
 We can also overlay images.  
 
 ```
-gst-launch-1.0 videotestsrc pattern=1 ! video/x-raw, framerate=60/1, width=100, height=100 ! compositor name=comp ! videoconvert ! ximagesink    videotestsrc ! video/x-raw, framerate=60/1, width=320, height=240 ! comp.
+gst-launch-1.0 videotestsrc pattern=1 ! video/x-raw, framerate=60/1, width=100, height=100 ! compositor name=comp ! videoconvert ! autovideosink    videotestsrc ! video/x-raw, framerate=60/1, width=320, height=240 ! comp.
 ```
 and a more complicated example:
 ```
-gst-launch-1.0 -e compositor name=comp  ! ximagesink sync=false v4l2src device=/dev/video2 ! videoconvert ! videoscale  ! video/x-raw, width=640, height=360 ! comp.sink_0 videotestsrc pattern="snow" ! video/x-raw, framerate=60/1, width=200, height=150 ! comp.sink_1
+gst-launch-1.0 -e compositor name=comp  ! autovideosink sync=false v4l2src device=/dev/video2 ! videoconvert ! videoscale  ! video/x-raw, width=640, height=360 ! comp.sink_0 videotestsrc pattern="snow" ! video/x-raw, framerate=60/1, width=200, height=150 ! comp.sink_1
 ```
 
 We can also integrate with other programs like OpenCV. Run the command `gst-inspect-1.0 opencv` to see what OpenCV plugins are available.
 
 Try the following
 ```
-gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! facedetect ! videoconvert ! xvimagesink sync=false -e
+gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! facedetect ! videoconvert ! autovideosink sync=false -e
 
-gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! edgedetect ! videoconvert ! xvimagesink sync=false -e
+gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! edgedetect ! videoconvert ! autovideosink sync=false -e
 
-gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! skindetect ! videoconvert ! xvimagesink sync=false -e
+gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! skindetect ! videoconvert ! autovideosink sync=false -e
 ```
 
 GStreamer can be used to stream media (e.g. create your own IP camera) between devices, however to keep things simple, you'll stream from your Jetson to your Jetson.
@@ -243,7 +243,7 @@ This starts the "server" broadcasting the packets (udp) to the IP Address 127.0.
 In the second window, run the following: 
 
 ```
-gst-launch-1.0 udpsrc port=5000 ! application/x-rtp, media=video, encoding-name=H264 ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! ximagesink sync=false  -e
+gst-launch-1.0 udpsrc port=5000 ! application/x-rtp, media=video, encoding-name=H264 ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! autovideosink sync=false  -e
 ```
 
 This listens for the packets and decodes the RTP stream and displays it on the screen.
