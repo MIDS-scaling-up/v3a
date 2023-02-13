@@ -1,3 +1,5 @@
+# If you do not yet have your AWS credits, you'll be limited to part 1 of this lab.
+
 
 
 Part one of this lab will be done on a local Ubuntu VM.  If you'd like to run with a Jetson device, see old version of this lab.  Note, you may need to adjust some commands to fit the latest version of Jetpack that is available for your device.
