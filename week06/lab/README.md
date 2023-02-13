@@ -25,10 +25,10 @@ Source elements generate data for use by a pipeline, for example reading from a 
 ![Filter element](images/src-element.png)
 
 
-Filters and filter-like elements have both input and outputs pads. They operate on data that they receive on their input (sink) pads, and will provide data on their output (source) pads.
+Filters and filter-like elements have both input and outputs pads. They operate on data that they receive on their input (sink) pads and will provide data on their output (source) pads.
 
 
-Filter-like elements can have any number of source or sink pads.  For example, a demuxer would have one sink pad and several (1-N) source pads, one for each of the  streams contained in the source format. On the other hand, an decoder will only have one source and sink pads.
+Filter-like elements can have any number of source or sink pads.  For example, a demuxer would have one sink pad and several (1-N) source pads, one for each of the  streams contained in the source format. On the other hand, a decoder will only have one source and sink pads.
 
 ![Filter element](images/filter-element.png)
 
@@ -55,16 +55,16 @@ The patterns have an index number and a name, either may be used.  For example b
 
 Explore the various patterns.
 
-The first example demostrated running a single pipeline, but we can do even more.  The following example runs two videotestsrc pipelines:
+The first example demonstrated running a single pipeline, but we can do even more.  The following example runs two videotestsrc pipelines:
 ```
 gst-launch-1.0 videotestsrc ! xvimagesink videotestsrc pattern=ball ! xvimagesink
 ```
 
-Edge devices such as the Nvidia Jetson line have their own hardware accellerated plugins.  While not covered in this lab, these plugins can be used to improve the performace of a varity of tasks including encoding, decoding and image transformations.
+Edge devices such as the Nvidia Jetson line have their own hardware accelerated plugins. While not covered in this lab, these plugins can be used to improve the performance of a variety of tasks including encoding, decoding and image transformations.
 
-To use a camera with GStreamer, you need to know what is available.  You can get infomration about your available camera or cameras through `gst-device-monitor-1.0` applicaion.
+To use a camera with GStreamer, you need to know what is available.  You can get information about your available camera or cameras through `gst-device-monitor-1.0` application.
 
-Run `gst-device-monitor-1.0 Video/Source` to see your cameras and their capablities.  For example, my VM has the following:
+Run `gst-device-monitor-1.0 Video/Source` to see your cameras and their capabilities.  For example, my VM has the following:
 ```
 	name  : FaceTime HD Camera
 	class : Video/Source
@@ -135,7 +135,7 @@ Device found:
 ```
 You can see that I have 2 cameras available, each with a different set of capabilities.  
 
-For the rest of the camera based examples, you'll need to use values that work with your actual hardware; I'll be using /dev/video2.
+For the rest of the camera-based examples, you'll need to use values that work with your actual hardware; I'll be using /dev/video2.
 
 ```
 gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! xvimagesink sync=false -e
@@ -250,18 +250,18 @@ This is just a very simple introduction to GStreamer.  If you are interested in 
 
 
 
-## Part 2: Optimiazation and Quantization
+## Part 2: Optimization and Quantization
 
 This is a very simple image classification example based on [PTQ_example.ipynb](https://github.com/tensorflow/tensorrt/blob/master/tftrt/examples-py/PTQ_example.ipynb) from the TensorFlow/TF-TRT project. You'll learn how to use TensorFlow 2.x to convert a Keras model to three tf-trt models, a fp32, fp16, and int8. A simple set of test images will be used to both validate and benchmark both the native model and the three tf-trt ones.
 
 ### Running 
 1. Procure a virtual machine in AWS - we recommend a T4 or A10 GPU and 32 GB of RAM (e.g. g4dn.2xlarge). If you are interested in the VM options, see this [link](https://docs.aws.amazon.com/dlami/latest/devguide/gpu.html). Use the Nvidia Deep Learning AMI so that the pre-requisites are pre-installed for you. We recommend using the latest [nvidia tensorflow container](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorflow).  When starting the container, make sure that port 8888 is bound to the host, e.g. `-p 8888:8888` and that your firewall allows ingress on port 8888.  
-2. Clone this reposisotry: `git clone https://github.com/MIDS-scaling-up/v3a`.
+2. Clone this repository: `git clone https://github.com/MIDS-scaling-up/v3a`.
 3. Start Jupyter Lab with the command: `jupyter lab --ip 0.0.0.0 -allow-root`.  
 4. Login to your lab instance.
 5. Navigate to and open v3a/week06/lab/tf-trt.ipynb.
 6. Run the notebook.
 
-Think about and note the changes in inference peformance. Feel free to replace the model used with a different one and rerun.
+Think about and note the changes in inference performance. Feel free to replace the model used with a different one and rerun.
 
 **DELETE YOUR VM when the lab is complete!**
