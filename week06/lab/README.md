@@ -262,6 +262,6 @@ This is a very simple image classification example based on [PTQ_example.ipynb](
 5. Navigate to and open v3a/week06/lab/tf-trt.ipynb.
 6. Run the notebook.
 
-Think about and note the changes in inference performance. Feel free to replace the model used with a different one and rerun.
+Think about and note the changes in inference performance – in other words, what was the fastest performing?  Feel free to replace the model used with a different one and rerun.
 
 **DELETE YOUR VM when the lab is complete!**
