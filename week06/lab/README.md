@@ -20,7 +20,7 @@ At its core GStreamer uses pipelines, where a pipeline is a list of elements sep
 
 An element can be thought of as a black box with one or more pads, the element's interface to the outside world; data comes in on one side, the data element does something with it and something else comes out the other side.  There are 3 types of elements, source, filter and filter-like, and sink elements.
 
-Source elements generate data for use by a pipeline, for example reading from from a camera or a file. 
+Source elements generate data for use by a pipeline, for example reading from a camera or a file. 
 
 ![Filter element](images/src-element.png)
 
