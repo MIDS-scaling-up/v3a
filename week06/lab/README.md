@@ -142,7 +142,7 @@ For the rest of the camera-based examples, you'll need to use values that work w
 ```
 gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! autovideosink sync=false -e
 ```
-In this example, I'm using a `videoconvert`.  This is needed as on my machine, `autovideosink` does not support the image format `YUY2` (however `NV12` is). Videoconvert finds a format that xvimagesink as converts as needed.  If no conversion is needed, this is simply a pass through.  If you'd like to see that videoconvert is using, add the `-v` flag to your command.
+In this example, I'm using a `videoconvert`.  This is needed as on my machine, `autovideosink` does not support the image format `YUY2` (however `NV12` is). Videoconvert finds a format that autovideosink as converts as needed.  If no conversion is needed, this is simply a pass through.  If you'd like to see that videoconvert is using, add the `-v` flag to your command.
 
 
 
@@ -182,7 +182,7 @@ Why is the extra videoconvert needed?  Try:
 ```
 gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw,framerate=30/1 ! videoconvert ! video/x-raw,format=GRAY8  ! autovideosink sync=false -e
 ```
-Fails as we need to make sure the video is in a format that xvimagesink can understand, e.g. BGRx.
+Fails as we need to make sure the video is in a format that autovideosink can understand, e.g. BGRx.
 
 We can also do fun things like flip the image:
 ```
