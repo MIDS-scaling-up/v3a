@@ -1,6 +1,6 @@
 
 
-Part one of this lab will be done on a local Ubuntu VM.  If you'd like to run with a Jetson device, see old version of this lab.  Note, you may need to adjust some commands to fit the latest lastest version of Jetpack that is available for your device.
+Part one of this lab will be done on a local Ubuntu VM.  If you'd like to run with a Jetson device, see old version of this lab.  Note, you may need to adjust some commands to fit the latest version of Jetpack that is available for your device.
 
 ## VM Setup
 Once you have your VM created, you'll need to make sure gstreamer is installed.  From a terminal, run the following command:
