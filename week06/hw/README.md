@@ -1,5 +1,8 @@
 # Homework 6
 
+# If you do not yet have your AWS credits, complete and submit part 1 of the homework.  For part 2, please just comment that you do not have any AWS credits.
+
+
 This homework covers some use of GStreamer and model optimization.  It builds on the week 6 lab and completing the lab first is hightly recommended.   
 
 This is an ungraded assignment
