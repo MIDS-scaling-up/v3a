@@ -50,7 +50,7 @@ gst-launch-1.0 videotestsrc ! xvimagesink
 
 This will display a classic "test pattern". The command is composed of two elements, the videotestsrc and a video sink, xvimagesink.
 
-Running `gst-inspect-1.0 videotestsrc` will provide some additional information on the src and supported properies.  In this case, we are interested in the property `pattern`.
+Running `gst-inspect-1.0 videotestsrc` will provide some additional information on the src and supported properties.  In this case, we are interested in the property `pattern`.
 The patterns have an index number and a name, either may be used.  For example both `gst-launch-1.0 videotestsrc pattern=snow ! xvimagesink` and `gst-launch-1.0 videotestsrc pattern=0 ! xvimagesink` produce the same thing.
 
 Explore the various patterns.
