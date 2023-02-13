@@ -12,7 +12,7 @@ sudo apt-get install -y python3-dev python3-pip  python3-opencv vim-tiny  libope
 
 In this part of the lab, you'll explore using GStreamer, primally via the gst-launch-1.0 tool.  
 
-While not covered here, audio is also supported.  See the Gstreamer documentation for examples.
+While not covered here, audio is also supported.  See the Gstreamer [documentation](https://gstreamer.freedesktop.org/documentation/plugins_doc.html?gi-language=c) for examples.
  
 
 ### Basics
