@@ -36,7 +36,7 @@ Filter-like elements can have any number of source or sink pads.  For example, a
 ![Filter element](images/filter-element-multi.png)
 
 
-Finally, sink elements are the end of a pipeline; they accept an input and outout to a display, to disk, etc.
+Finally, sink elements are the end of a pipeline; they accept an input and output to a display, to disk, etc.
 
 ![Filter element](images/sink-element.png)
 
