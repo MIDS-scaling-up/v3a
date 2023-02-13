@@ -154,7 +154,7 @@ Let's start by asking for 30 FPS.  Note, you'll need to use the` X/1` for framer
 ```
 gst-launch-1.0 v4l2src device=/dev/video2 ! video/x-raw, format=YUY2, width=1280, height=720, framerate=30/1 ! videoconvert ! xvimagesink sync=false -e
 ```
-Notice that the size of the window as changed.  Now what if we want 30 FPS at 1920x1080?  Let's find out.
+Notice that the size of the window has changed.  Now what if we want 30 FPS at 1920x1080?  Let's find out.
 ```
 gst-launch-1.0 v4l2src device=/dev/video2 ! video/x-raw, format=YUY2, width=1920, height=1080, framerate=30/1 ! videoconvert ! xvimagesink sync=false -e
 ```
