@@ -140,13 +140,13 @@ For the rest of the camera based examples, you'll need to use values that work w
 ```
 gst-launch-1.0 v4l2src device=/dev/video2 ! videoconvert ! xvimagesink sync=false -e
 ```
-In this example, I'm using a `videoconvert`.  This is needed as on my machine, `xvimagesink` does not suppor the image format `YUY2` (howerver `NV12` is). Videoconvert finds a format that xvimagesink as converts as needed.  If no conversion is needed, this is simply a pass through.  If you'd like to see that videoconvert is using, add the `-v` flag to your command.
+In this example, I'm using a `videoconvert`.  This is needed as on my machine, `xvimagesink` does not support the image format `YUY2` (however `NV12` is). Videoconvert finds a format that xvimagesink as converts as needed.  If no conversion is needed, this is simply a pass through.  If you'd like to see that videoconvert is using, add the `-v` flag to your command.
 
 
 
 Take note of the property `sync=false` and the flag `-e`.  Setting sync to false, incoming samples will be played as fast as possible, and the -e flag forces the stream to close before shutting down the pipeline.
 
-Now that we have access to the cameara, we can explore what we can do.  Now the the camera is the limit; if your camera doesn't support 60 FPS and 4K, there is no use asking for it.  
+Now that we have access to the camera, we can explore what we can do.  Now the the camera is the limit; if your camera doesn't support 60 FPS and 4K, there is no use asking for it.  
 
 Cameras may support more than one FPS option (mine doesn't but we'll pretend) .
 
