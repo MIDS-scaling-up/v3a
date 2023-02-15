@@ -61,7 +61,7 @@ gst-launch-1.0 videotestsrc ! autovideosink
 This will display a classic "test pattern". The command is composed of two elements, the videotestsrc and a video sink, autovideosink.  Note, autovideosink will automatically find the correct sink, e.g. xvimagesink or ximagesink.  We'll use this to help with portablity between VMWare and Parellels.  If you have any issues, try using xvimagesink or ximagesink directly.
 
 Running `gst-inspect-1.0 videotestsrc` will provide some additional information on the src and supported properties.  In this case, we are interested in the property `pattern`.
-The patterns have an index number and a name, either may be used.  For example both `gst-launch-1.0 videotestsrc pattern=snow ! autovideosink` and `gst-launch-1.0 videotestsrc pattern=0 ! autovideosink` produce the same thing.
+The patterns have an index number and a name, either may be used.  For example both `gst-launch-1.0 videotestsrc pattern=snow ! autovideosink` and `gst-launch-1.0 videotestsrc pattern=1 ! autovideosink` produce the same thing.
 
 Explore the various patterns.
 
