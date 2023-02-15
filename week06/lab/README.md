@@ -10,6 +10,8 @@ Part one of this lab will be done on a local Ubuntu VM.  If you'd like to run wi
 
 See [here](https://ubuntu.com/tutorials/upgrading-ubuntu-desktop#1-before-you-start) to upgrade from 20.04 to 22.04.
 
+Due to this issue and the overall cameral peformace, for this lab/homework, I strongly recommend using Parallels over VMWare Fusion if you are using a M1 or M2 mac.
+
 
 Once you have your VM created, you'll need to make sure gstreamer is installed.  From a terminal, run the following command:
 ```
