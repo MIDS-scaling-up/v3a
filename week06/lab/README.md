@@ -7,7 +7,7 @@ Part one of this lab will be done on a local Ubuntu VM.  If you'd like to run wi
 ## VM Setup
 Once you have your VM created, you'll need to make sure gstreamer is installed.  From a terminal, run the following command:
 ```
-sudo apt-get install -y python3-dev python3-pip  python3-opencv vim-tiny  libopencv-dev git python3-gst-1.0  gstreamer1.0 gstreamer1.0-tools gstreamer1.0-plugins-base-apps gstreamer1.0-plugins-base  gstreamer1.0-plugins-good  gstreamer1.0-plugins-bad  gstreamer1.0-plugins-ugly gstreamer1.0-x  gstreamer1.0-libav
+sudo apt-get install -y python3-dev python3-pip  python3-opencv vim-tiny  libopencv-dev git python3-gst-1.0  gstreamer1.0 gstreamer1.0-tools gstreamer1.0-plugins-base-apps gstreamer1.0-plugins-base  gstreamer1.0-plugins-good  gstreamer1.0-plugins-bad  gstreamer1.0-plugins-ugly gstreamer1.0-libav
 ```
 
 ## Part 1: GStreamer
