@@ -10,7 +10,7 @@ We are conducting an in-class competition on Kaggle. You can find instructions [
 
 Reference material is found in [this](https://arxiv.org/abs/1812.01187?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+arxiv%2FQSXk+%28ExcitingAds%21+cs+updates+on+arXiv.org%29) paper - make sure to read it first.  
   
-The goal of the homework is to develop a model in kaggle (referencing the [Benchmark script](https://www.kaggle.com/dmitryrekesh/benchmark-spring-2023) if you wish), which willl score as high an accuracy score as possible. Also, you should implement at least three concepts from the Lab (or alternatively from the referenced paper) into your solution.   
+The goal of the homework is to develop a model in kaggle (referencing the [Benchmark script](https://www.kaggle.com/code/dmitryrekesh/benchmark-spring-2023) if you wish), which willl score as high an accuracy score as possible. Also, you should implement at least three concepts from the Lab (or alternatively from the referenced paper) into your solution.   
    
 You can see an overview of how to use kaggle in the overview page.  
   
