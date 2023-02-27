@@ -68,7 +68,7 @@ Questions:
 * How many classes?
 * How long does it take to train?
 * What is MAP?
-* What is the MAP of [Nvidia's SSD300](https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/Detection/SSD) recipe?
+* What is the IoU=0.50:0.95 of [Nvidia's SSD300](https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/Detection/SSD) recipe?
 
 
 ### Part 3. Training DETR on custom data
