@@ -11,7 +11,7 @@ Notes:
 * Create at least two classes. Recommended: 'Car' and 'SUV'
 * Feel free to use [MakeSense AI](https://www.makesense.ai/) or [Roboflow](http://roboflow.com/).Make sure your annotations are (or converted to) the coco format.
 * Recommended: use Active Learning
-* Train for as many epochs as needed to cross the 0.4 mAP@.5
+* Train for as many epochs as needed to cross the 0.4 IoU=0.50:0.95
 
 Due before week 9 session begins
 
