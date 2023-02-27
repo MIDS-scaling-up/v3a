@@ -57,30 +57,31 @@ Download a sample [video dataset](https://w251lab08.s3.us-west-1.amazonaws.com/v
 * What is the frame rate?
 * In the light of the previous exercise, what is a good way to extract frames from such a video?
 
-### Part 2. Yolo v5 tutorial
-Of the many object detectors, Yolo v5 continues to dominate. Take a look at the [PyTorch object detection models](https://pytorch.org/vision/stable/models.html#object-detection-instance-segmentation-and-person-keypoint-detection) and then glance through [Yolov5 documentation](https://github.com/ultralytics/yolov5)
+### Part 2. DETR tutorial
+We already introduced DETR in section 3. Take a look again at the [DETR github documentation](https://github.com/facebookresearch/detr)
 
-Open up the [Yolo v5 Colab notebook](https://colab.research.google.com/github/ultralytics/yolov5/blob/master/tutorial.ipynb)  -- if Colab glitches on you, use the [Kaggle variant](https://www.kaggle.com/ultralytics/yolov5) and examine / click though it.  Make sure to create an account on wandb.com. Train the model on the coco128 dataset.
+Open up the [Object Detection with DETR Colab notebook](https://colab.research.google.com/github/facebookresearch/detr/blob/colab/notebooks/detr_demo.ipynb) and examine / click though it.  
 
 Questions:
-* How many files are in the dataset?
-* How many annotations?
+* What was DETR trained on?
+* How many annotations in that dataset?
 * How many classes?
 * How long does it take to train?
 * What is MAP?
-* Was transfer learning used in training?
-* Are you able to see your experiments on wandb?
 * What is the MAP of [Nvidia's SSD300](https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/Detection/SSD) recipe?
 
 
 ### Part 3. Training DETR on custom data
-In this section, we will be following the [Roboflow Yolo v5 fine tuning guide](https://colab.research.google.com/drive/1gDZ2xcTOgR39tGGs-EZ6i3RTs16wmzZQ).  In order to complete this notebook, you will need to log into Roboflow / create an account, so that you are able to download the [BCCD dataset](https://public.roboflow.com/object-detection/bccd). Please follow the guide; training should take 6-10 minutes.  Questions:
-* How many classes are in this dataset?
+In this section, we will be following the [DETR fine tuning guide](https://github.com/NielsRogge/Transformers-Tutorials/blob/master/DETR/Fine_tuning_DetrForObjectDetection_on_custom_dataset_(balloon).ipynb). Please follow the steps; training should take !10 minutes.  Questions:
+* Which dataset are we fine tuning on?
+* How many classes are in the dataset?
 * How many samples?
-* Do you get better results with the raw or augmented dataset?
+* Which model are we finetuning?
+* How long are we fine tuning for?
+* what is the resulting IoU=0.50:0.95?
 
 ### Part 4. Image annotation
-The landscape of image annotators continues to suffer from fragmentation, with solutions rapidly changing and no provider dominating.  For the lab, we will use [Roboflow](https://roboflow.com/).  Please upload a few dozen images that you extracted in previous sections.  Define a few classes and try annotating. 
+The landscape of image annotators continues to suffer from fragmentation, with solutions rapidly changing and no provider dominating.  For the lab, we will use [Roboflow](https://roboflow.com/).  Please create an account and upload a few dozen images that you extracted in previous sections.  Define a few classes (e.g. 'car', 'suv', 'person', etc) and try annotating. 
 
 Questions:
 * How long does it take you to annotate 10-20 images?
