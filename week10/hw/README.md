@@ -21,6 +21,7 @@ These are some use cases for GAN applications. However, note that there are cons
 - GAN for Arts: Turn doodles into photorealistic landscapes ([example](https://github.com/NVlabs/SPADE))
 - GAN for Super Resolution: Image-to-Image translation 
 - GAN for Talking Heads: Image-and-Landmark-to-Video ([example](https://github.com/vincent-thevenin/Realistic-Neural-Talking-Head-Models))
-- GAN for Face Restoration: in Old Photos: GFP-GAN, zero-shot SOTA model ([repo](https://github.com/TencentARC/GFPGAN))
+- GAN for Face Restoration: in Old Photos: restore old damaged and faded photos in a surprisingly realistic way ([example](https://github.com/TencentARC/GFPGAN))
+- GAN for Low-Light Image Enhancement: recovering normal-light images from the images captured under very dim environments ([example](https://www.sciencedirect.com/science/article/abs/pii/S0950705121011151))
 
 And many more...
