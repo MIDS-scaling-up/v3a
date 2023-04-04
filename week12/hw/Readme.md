@@ -2,7 +2,7 @@
 
 Due: beginning of week 13.
 
-Train [Conformer-Transducer](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/asr/models.html#conformer-transducer) BPE *Small* on LibriSpeech from scratch for 10-20 epochs.  Note that Nemo has a [script](https://github.com/NVIDIA/NeMo/blob/main/scripts/dataset_processing/get_librispeech_data.py) for downloading and processing librispeech automatically, so please use it.
+Train [Conformer-Transducer](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/asr/models.html#conformer-transducer) BPE *Small* on LibriSpeech from scratch for 10-20 epochs.  We will distribute a tarred and processed version of Librispeech in class.
 
 Notes:
 * You will obviously need to provision a VM in AWS to work on this.
